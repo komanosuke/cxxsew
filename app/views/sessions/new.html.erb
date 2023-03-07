@@ -1,0 +1,35 @@
+<main>
+    <div class="brand-theme">Anti Nihilism Fashion Brand</div>
+    <% if logged_in? %>
+        <div id="contents">
+            <div class="article">
+                <h1>- ログインしています -</h1>
+                <%= link_to "トップページへ", '/', class:'btn' %>
+            </div>
+        </div>
+    <% else %>
+        <div id="contents">
+            <div class="article">
+                <h1>- Log in -</h1>
+                <div class="bg-rects">
+                    <div class="bg-rect"></div>
+                    <div class="bg-rect"></div>
+                    <div class="bg-rect"></div>
+                    <div class="bg-rect"></div>
+                    <div class="bg-rect"></div>
+                </div>
+                <%= form_for(:session, url: login_path) do |f| %>
+                    <label for="email">メールアドレス</label>
+                        <%= f.email_field :email, placeholder:'メールアドレスを入力してください' %>
+                    <label for="password">パスワード</label>
+                        <%= f.password_field :password, placeholder:'パスワードを入力してください' %>
+                    <%= f.submit 'Log in', class:'btn', id:'submit-btn' %>
+                <div class="btn sub-btn"><%= link_to "Forget Password?", '/' %></div>
+                <div class="btn sub-btn"><%= link_to "アカウント作成", "/" %></div>
+                <% end %>
+            </div>
+        </div>
+    <% end %>
+
+    <%= image_tag "/image/mid_main4.png", class:"footer-img", alt:"" %>
+</main>

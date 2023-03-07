@@ -1,0 +1,26 @@
+<main>
+
+    <div class="brand-theme">Anti Nihilism Fashion Brand</div>
+
+    <div id="contents">
+        <p id="content-date"><%= @news.updated_at %></p>
+        <h1 id="blog-title"><%= @news.title %>（Vol.<%= @news.id %>）</h1>
+        <div class="bg-rects">
+            <div class="bg-rect"></div>
+            <div class="bg-rect"></div>
+            <div class="bg-rect"></div>
+            <div class="bg-rect"></div>
+            <div class="bg-rect"></div>
+        </div>
+        <hr>
+        <div class="work-box" id="content-box">
+            <%= image_tag @news.image.url, class:"content-img", alt:"" %> 
+            <div class="content-img-title">- <%= @news.image_title %> -</div>
+            <p><%= @news.text %></p>
+        </div>
+        <div class="btn" id="submit-btn"><a href="/news">News一覧に戻る</a></div>
+        <hr>
+    </div>
+
+    <%= image_tag "/image/mid_main4.png", class:"footer-img", alt:"" %>
+</main>

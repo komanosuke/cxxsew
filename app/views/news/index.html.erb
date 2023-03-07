@@ -1,0 +1,49 @@
+<main>
+
+    <div class="brand-theme">Anti Nihilism Fashion Brand</div>
+    <%= image_tag "/image/mid_main3.png", class:"header-img", alt:"" %>
+
+    <div id="contents">
+        <div class="article">
+            <h1>- News -</h1>
+            <div class="bg-rects">
+                <div class="bg-rect"></div>
+                <div class="bg-rect"></div>
+                <div class="bg-rect"></div>
+                <div class="bg-rect"></div>
+                <div class="bg-rect"></div>
+            </div>
+            <p>ここでは、CxxSewに関する最新のニュースをご覧いただけます。</p>
+        </div>
+        <hr>
+        <% if @news.empty? %>
+            <p>まだニュースが投稿されていません。</p>
+        <% else %>
+            <div class="left" id="content">
+            <% @news.each do |news| %>
+                <div class="works">
+                    <div class="work">
+                        <a href="/news/<%= news.id %>">
+                            <%= image_tag news.image.url, alt:"" %>
+                            <div>
+                                <p class="date"><%= news.updated_at %></p>
+                                <p><%= news.title %></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            <% end %>
+        <% end %>
+        </div>
+        <div class="bg-rects">
+            <div class="bg-rect"></div>
+            <div class="bg-rect"></div>
+            <div class="bg-rect"></div>
+            <div class="bg-rect"></div>
+            <div class="bg-rect"></div>
+        </div>
+        <hr>
+    </div>
+
+    <%= image_tag "/image/mid_main4.png", class:"footer-img", alt:"" %>
+</main>
