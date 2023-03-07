@@ -976,6 +976,25 @@ input[type="checkbox"]{
     border: 1px solid indianred;
 }
 
+#sub-menu2 {
+    transform: rotate(0deg);
+    width: 90%;
+    display: flex;
+    margin-top: -10px;
+}
+
+#sub-menu2 a {
+    display: block;
+    width: 20vw;
+    text-align: center;
+    height: 20vw;
+    line-height: 20vw;
+    color: #fff;
+    margin: 5px;
+    font-size: 14px;
+    z-index: 1000;
+}
+
 
 @media screen and (max-width:750px) {
     .pc {
