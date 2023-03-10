@@ -10,7 +10,7 @@
         <div class="table-wrapper" id="scroll-table">
             <div class="tr">
                 <div class="th scroll-th check">
-                    <input type="checkbox">
+                    <input type="checkbox" id="check-all">
                 </div>
                 <div class="th scroll-th edit">EDIT</div>
                 <div class="th scroll-th id">ID</div>
@@ -21,7 +21,7 @@
             <% @news.each do |news| %>
                 <div class="tr">
                     <div class="td scroll-td check">
-                        <input type="checkbox">
+                        <input type="checkbox" class="delete-check">
                     </div>
                     <div class="td scroll-td edit">
                         <%= link_to '/news/' + news.id.to_s + '/edit' do %>

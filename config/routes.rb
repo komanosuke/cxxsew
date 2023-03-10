@@ -33,4 +33,6 @@ Rails.application.routes.draw do
   get 'terms', to: 'main#terms'
   get 'policy', to: 'main#policy'
 
+  get 'example', to: 'examples#index'
+
 end
