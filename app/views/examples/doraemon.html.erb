@@ -6,7 +6,7 @@
     <hr>
     <div class="contents" id="dora-con">
         <p>マイクボタンを押して<br>ドラえもんに話しかけてみよう！<br>（ラグあり）</p>
-        <%= video_tag "/movie/doraemon.mp4", muted: true, loop: true, id:'doraemon' %>
+        <%= video_tag "/movie/doraemon.mp4", muted: true, loop: true, poster:"/movie/doraemon.jpg", id:'doraemon' %>
         <div id="dora-wrapper">
             <%# <input type="text" id="message"> %>
             <%= form_tag(url_for(:action => 'doraemon'), :remote => true) do %>

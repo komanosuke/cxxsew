@@ -28,7 +28,8 @@ function speak(text){
     // uttr.lang = 'en-US';
     let voice = speechSynthesis.getVoices().find(function(voice){
             // return voice.name === 'Google US English';
-			return voice.name === 'Google 日本語';
+			// return voice.name === 'Google 日本語';
+            return voice.lang === 'ja-JP' && voice.name.includes('Google');
             // return voice.name === 'Kyoko';
     });
     if(voice){
@@ -117,6 +118,7 @@ if (SpeechRecognition){
         // エラー
         recognition.onerror = function(event) {
         btn_stt.disabled = false;
+        btn_stt.style.background = 'rgb(164, 72, 72)';
         alert('エラーが発生しました。');
         }
     }
