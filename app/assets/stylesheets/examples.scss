@@ -119,6 +119,10 @@ th, td {
     display: none;
 }
 
+#doraemon {
+    width: 60%;
+}
+
 
 #dora-wrapper form {
     // display: flex;
@@ -128,7 +132,7 @@ th, td {
 #dora-wrapper input {
     margin: 30px 5px;
     padding: 0 2%;
-    width: 90%;
+    width: 60%;
     border: 1px solid skyblue;
 }
 
@@ -146,6 +150,7 @@ th, td {
 }
 
 #dora-con {
+    padding-top: 80px;
     margin-bottom: 0;
     padding-bottom: 25px;
 }
