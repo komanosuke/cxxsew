@@ -1,4 +1,5 @@
 <header>
+	<!--
 	<div id="hd-flex">
 		<div class="hd-side pc">pc</div>
 		<div class="toggle-btn sp">
@@ -14,9 +15,28 @@
 		</a>
 		<a href="/example"><div class="hd-side">log in</div></a>
 	</div>
+	-->
+	<div id="hd-flex">
+		<div class="hd-side pc">pc</div>
+		<div class="toggle-btn sp">
+			<div id="cross">
+				<span class="menu-line-top"></span>
+				<span class="menu-line-middle"></span>
+				<span class="menu-line-bottom"></span>
+			</div>
+		</div>
+		<%# <a href="/example" id="hd-center"> %>
+		<a href="/doraemon" id="hd-center">
+			<%#= image_tag "/image/maniacs_w.jpg", alt:"" %>
+			<%# <div>MANIACS</div> %>
+			<div>DORAEMON</div>
+		</a>
+		<%# <a href="/example"><div class="hd-side">log in</div></a> %>
+		<a href="/doraemon"><div class="hd-side">log in</div></a>
+	</div>
 </header>
 
-<div class="hidden sp" id="sp-bg"></div>
+<%# <div class="hidden sp" id="sp-bg"></div>
 <div class="hidden sp" id="sp-menu">
 	<h1 class="menu-h2">- Menu -</h1>
 	<div class="explain">
@@ -37,6 +57,30 @@
 			<a href="/example">CONTACT</a>
 			<a href="/example">POLICY</a>
 			<a href="/example">TERMS</a>
+		</div>
+	</div>
+</div> %>
+<div class="hidden sp" id="sp-bg"></div>
+<div class="hidden sp" id="sp-menu">
+	<h1 class="menu-h2">- Menu -</h1>
+	<div class="explain">
+		<div class="rect-wrapper">
+			<div class="rect-row">
+				<a href="/doraemon"><p>ABOUT</p></a>
+				<a href="/doraemon"><p>NEWS</p></a>
+			</div>
+			<div class="rect-row">
+				<a href="/doraemon"><p>WORKS</p></a>
+				<a href="/doraemon"><p>CONTENTS</p></a>
+			</div>
+		</div>
+	</div>
+	<div class="explain">
+		<div class="rect-wrapper" id="sub-menu2">
+			<a href="/doraemon">HELP</a>
+			<a href="/doraemon">CONTACT</a>
+			<a href="/doraemon">POLICY</a>
+			<a href="/doraemon">TERMS</a>
 		</div>
 	</div>
 </div>

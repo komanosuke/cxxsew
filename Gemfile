@@ -59,6 +59,8 @@ gem 'carrierwave', '~> 1.0'
 
 gem 'kaminari'
 
+gem 'ruby-openai'
+
 
 group :production do
   gem 'pg'

@@ -1,0 +1,30 @@
+
+<div class="back" id="dora-back">
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <div class="contents" id="dora-con">
+        <p>マイクボタンを押して<br>ドラえもんに話しかけてみよう！<br>（ラグあり）</p>
+        <%= video_tag "/movie/doraemon.mov", muted: true, loop: true, id:'doraemon' %>
+        <div id="dora-wrapper">
+            <%# <input type="text" id="message"> %>
+            <%= form_tag(url_for(:action => 'doraemon'), :remote => true) do %>
+                <%= text_field_tag :msg, nil, {id:'msg-input'} %>
+                <%= submit_tag '話しかける' ,{id: 'send', class:'btn'} %>
+            <% end %>
+        </div>
+        <img src="/svg/microphone.svg" id="btn_stt">
+        <div>
+        <p id="output_stt">ここに結果が返ります。</p>
+        <p id="confidence_stt"></p>
+        </div>
+        <p id="hidden-word"><%= @word %></p>
+        <button id="voiceButton">voice</button>
+        <button id="stop">stop</button>
+        <button id="play">play</button>
+        
+    </div>
+</div>
+
+<%= javascript_pack_tag 'doraemon' %>

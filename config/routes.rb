@@ -34,5 +34,9 @@ Rails.application.routes.draw do
   get 'policy', to: 'main#policy'
 
   get 'example', to: 'examples#index'
+  get 'cost', to: 'examples#cost'
+  get 'doraemon', to: 'examples#doraemon'
+  post 'doraemon', to: 'examples#doraemon'
+
 
 end

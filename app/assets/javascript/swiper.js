@@ -9,6 +9,9 @@ document.addEventListener('turbolinks:load', function() {      // 発火タイ�
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
         },
+        // autoplay: {
+        //   delay: 5000,
+        // },
         loop: true,
     });
 });
